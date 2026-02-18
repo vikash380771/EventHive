@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #9333ea;
+  /* Purple 600 */
+  --secondary: #d946ef;
+  /* Fuchsia 500 */
+  --background: #faf5ff;
+  /* Purple 50 (Fade Purple) - strict light mode */
+  --text: #3b0764;
+  /* Purple 950 */
+}
+
+/* Remove dark mode block entirely */
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
