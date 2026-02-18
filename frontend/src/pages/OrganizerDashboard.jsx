@@ -16,7 +16,7 @@ const OrganizerDashboard = () => {
     });
 
     useEffect(() => {
-        const socket = io('http://localhost:5000');
+        const socket = io(import.meta.env.VITE_API_URL.replace('/api', ''));
         fetchEvents();
 
         socket.on('updateRegistrations', ({ eventId, count }) => {
@@ -350,3 +350,4 @@ const OrganizerDashboard = () => {
 };
 
 export default OrganizerDashboard;
+
