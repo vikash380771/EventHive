@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    // Configure axios defaults
+    // Configure axios Defaults
     axios.defaults.baseURL = 'http://localhost:5000/api';
 
     useEffect(() => {
@@ -82,3 +82,4 @@ export const AuthProvider = ({ children }) => {
         </AuthContext.Provider>
     );
 };
+
