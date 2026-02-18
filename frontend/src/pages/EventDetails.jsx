@@ -21,7 +21,7 @@ const EventDetails = () => {
         fetchEvent();
 
         // Socket connection for real-time updates
-        const socket = io('http://localhost:5000');
+        const socket = io(import.meta.env.VITE_API_URL.replace('/api', ''));
         socket.on('updateRegistrations', ({ eventId, count }) => {
             if (eventId === id) {
                 setLocalRegisteredCount(count);
@@ -235,3 +235,4 @@ const EventDetails = () => {
 };
 
 export default EventDetails;
+
