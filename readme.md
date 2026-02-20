@@ -70,9 +70,9 @@ Installation
    ```
    Create a `.env` file in the `backend` directory:
    ```env
-   MONGODB_URI=mongodb+srv://eventhive2026:eventhive2026@cluster0.ndzncj5.mongodb.net/?appName=Cluster0
+   MONGODB_URI=MONGO_URI=mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/EventHive
    PORT=5000
-   JWT_SECRET=eventhive_secret_key_2026
+   JWT_SECRET=your_secret_key
    ```
 
 3. Frontend Setup:
@@ -97,6 +97,7 @@ cd frontend
 npm run dev
 ```
 The application will be available at `http://localhost:5173`.
+
 
 
 
