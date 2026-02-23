@@ -6,10 +6,7 @@ const generateToken = (userId) => {
         expiresIn: '30d'
     });
 };
-
-// @desc    Register new user
-// @route   POST /api/auth/register
-// @access  Public
+// Register
 exports.register = async (req, res) => {
     try {
         const { username, email, password, role } = req.body;
@@ -39,10 +36,7 @@ exports.register = async (req, res) => {
         res.status(500).json({ message: 'Server error', error: error.message });
     }
 };
-
-// @desc    Authenticate user & get token
-// @route   POST /api/auth/login
-// @access  Public
+// login 
 exports.login = async (req, res) => {
     try {
         const { email, password } = req.body;
@@ -70,4 +64,5 @@ exports.login = async (req, res) => {
         res.status(500).json({ message: 'Server error', error: error.message });
     }
 };
+
 
